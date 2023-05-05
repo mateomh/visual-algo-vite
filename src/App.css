@@ -46,3 +46,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.start-button {
+  margin-bottom: 1rem;
+  border-style: outset;
+  border-color: #888;
+  font-weight: bold;
+}
