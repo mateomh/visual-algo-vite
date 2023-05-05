@@ -2,7 +2,7 @@ import './Board/styles.css';
 import Piece from './Piece';
 
 interface BoardProps {
-  grid: string[];
+  grid: string[][];
 }
 
 const Board:React.FC<BoardProps> = ({
@@ -11,7 +11,9 @@ const Board:React.FC<BoardProps> = ({
 
   return (
     <div className="board">
-      {grid.map(item => <Piece text={item} />)}
+      {grid.map((row:string[]) => {
+        return row.map((item: string) => <Piece text={item} />)
+      })}
     </div>
   )
 }
